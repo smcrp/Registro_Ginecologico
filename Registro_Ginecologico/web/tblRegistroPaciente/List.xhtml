@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTblRegistroPacienteTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+            <h:form id="TblRegistroPacienteListForm">
+                <p:panel header="#{bundle.ListTblRegistroPacienteTitle}">
+                    <p:dataTable id="datalist" value="#{tblRegistroPacienteController.items}" var="item"
+                                 selectionMode="single" selection="#{tblRegistroPacienteController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.idpaciente}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                        <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
+                        <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_idpaciente}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idpaciente}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_nombre}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nombre}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_apellido}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.apellido}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_ci}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ci}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_fechanacimiento}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fechanacimiento}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_tlf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tlf}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_direccion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.direccion}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antfamiliares}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antfamiliares}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antpersonsales}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antpersonsales}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecomenarquia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecomenarquia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecosexarquia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecosexarquia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_numparejassexuales}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.numparejassexuales}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecociclos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecociclos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecogestas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecogestas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecoparas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecoparas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecoabortos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecoabortos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecopmf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecopmf}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecofur}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecofur}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecofpp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecofpp}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecoeg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.antginecoeg}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_ta}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ta}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_peso}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.peso}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_talla}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.talla}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{tblRegistroPacienteController.prepareCreate}" update=":TblRegistroPacienteCreateForm" oncomplete="PF('TblRegistroPacienteCreateDialog').show()"/>
+                            <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":TblRegistroPacienteViewForm" oncomplete="PF('TblRegistroPacienteViewDialog').show()" disabled="#{empty tblRegistroPacienteController.selected}"/>
+                            <p:commandButton id="editButton"   icon="ui-icon-pencil" value="#{bundle.Edit}" update=":TblRegistroPacienteEditForm" oncomplete="PF('TblRegistroPacienteEditDialog').show()" disabled="#{empty tblRegistroPacienteController.selected}"/>
+                            <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="#{bundle.Delete}" actionListener="#{tblRegistroPacienteController.destroy}" update=":growl,datalist" disabled="#{empty tblRegistroPacienteController.selected}"/>
+                        </f:facet>
+                    </p:dataTable>
+                </p:panel>
+            </h:form>
+
+            <ui:include src="Create.xhtml"/>
+            <ui:include src="Edit.xhtml"/>
+            <ui:include src="View.xhtml"/>
+        </ui:define>
+    </ui:composition>
+
+</html>

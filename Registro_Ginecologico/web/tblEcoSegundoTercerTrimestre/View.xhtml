@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcoSegundoTercerTrimestreViewDlg" widgetVar="TblEcoSegundoTercerTrimestreViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle}">
+            <h:form id="TblEcoSegundoTercerTrimestreViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcoSegundoTercerTrimestreController.selected != null}">
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_idEcoSegundoTercerTrimestre}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.idEcoSegundoTercerTrimestre}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_idEcoSegundoTercerTrimestre}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_idPaciente}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.idPaciente}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_idPaciente}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_fur}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.fur}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_fur}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_fpp}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.fpp}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_fpp}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_eg}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.eg}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_eg}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_feto}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.feto}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_feto}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_presentacion}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.presentacion}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_presentacion}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_situacion}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.situacion}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_situacion}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_posicion}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.posicion}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_posicion}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioDbp}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioDbp}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioDbp}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioFemur}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioFemur}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioFemur}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioCerebelo}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioCerebelo}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioCerebelo}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioIla}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioIla}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioIla}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioCc}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioCc}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioCc}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioTibia}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioTibia}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioTibia}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioAtrio}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioAtrio}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioAtrio}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioPef}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioPef}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioPef}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioCa}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioCa}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioCa}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioHumero}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioHumero}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioHumero}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioCMagna}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioCMagna}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioCMagna}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_bioSexo}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.bioSexo}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_bioSexo}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_nodf}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.nodf}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_nodf}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_nopt}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.nopt}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_nopt}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_noph}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.noph}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_noph}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatCraneo}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatCraneo}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatCraneo}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatRinones}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatRinones}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatRinones}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatColumna}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatColumna}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatColumna}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatEstomago}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatEstomago}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatEstomago}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatRostro}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatRostro}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatRostro}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatVejiga}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatVejiga}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatVejiga}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatCorazon}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatCorazon}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatCorazon}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatExtremidades}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatExtremidades}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatExtremidades}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatAbdomen}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatAbdomen}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatAbdomen}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatCordon}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatCordon}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatCordon}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatIntestino}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatIntestino}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatIntestino}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_anatPlacenta}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.anatPlacenta}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_anatPlacenta}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_perfilTono}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.perfilTono}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_perfilTono}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_perfilMF}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.perfilMF}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_perfilMF}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_perfilMr}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.perfilMr}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_perfilMr}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_perfilLa}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.perfilLa}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_perfilLa}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_perfilPuntos}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.perfilPuntos}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_perfilPuntos}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoSegundoTercerTrimestreLabel_conclusiones}"/>
+                        <h:outputText value="#{tblEcoSegundoTercerTrimestreController.selected.conclusiones}" title="#{bundle.ViewTblEcoSegundoTercerTrimestreTitle_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="TblEcoSegundoTercerTrimestreViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

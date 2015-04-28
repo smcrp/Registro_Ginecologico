@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+            <h:form id="TblEcosonogramasResultListForm">
+                <p:panel header="#{bundle.ListTblEcosonogramasResultTitle}">
+                    <p:dataTable id="datalist" value="#{tblEcosonogramasResultController.items}" var="item"
+                                 selectionMode="single" selection="#{tblEcosonogramasResultController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.idecosonogramas}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                        <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
+                        <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_idpaciente}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idpaciente}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_idecosonogramas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idecosonogramas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_utAVF}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.utAVF}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_utRVF}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.utRVF}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_utIndiferente}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.utIndiferente}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_utSuperRegular}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.utSuperRegular}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_utSuperIrregular}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.utSuperIrregular}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ecopatronHomog}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ecopatronHomog}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ecopatronHeterog}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ecopatronHeterog}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_dimensionesL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dimensionesL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_dimensionesAP}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dimensionesAP}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_dimensionesT}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dimensionesT}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_cervixL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cervixL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_cervixAP}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cervixAP}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_utOtros}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.utOtros}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_interfEndometHomog}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.interfEndometHomog}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_interfEndometHetero}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.interfEndometHetero}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_interfEndometEspesor}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.interfEndometEspesor}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_interfEndometOtros}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.interfEndometOtros}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaDereL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaDereL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaDereAP}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaDereAP}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaDereT}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaDereT}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaDereVOL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaDereVOL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaIzqL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaIzqL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaIzqAP}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaIzqAP}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaIzqT}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaIzqT}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovaIzqVOL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovaIzqVOL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_ovariosOtros}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ovariosOtros}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_fondoSacoLibre}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fondoSacoLibre}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcosonogramasResultTitle_conclusiones}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.conclusiones}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{tblEcosonogramasResultController.prepareCreate}" update=":TblEcosonogramasResultCreateForm" oncomplete="PF('TblEcosonogramasResultCreateDialog').show()"/>
+                            <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":TblEcosonogramasResultViewForm" oncomplete="PF('TblEcosonogramasResultViewDialog').show()" disabled="#{empty tblEcosonogramasResultController.selected}"/>
+                            <p:commandButton id="editButton"   icon="ui-icon-pencil" value="#{bundle.Edit}" update=":TblEcosonogramasResultEditForm" oncomplete="PF('TblEcosonogramasResultEditDialog').show()" disabled="#{empty tblEcosonogramasResultController.selected}"/>
+                            <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="#{bundle.Delete}" actionListener="#{tblEcosonogramasResultController.destroy}" update=":growl,datalist" disabled="#{empty tblEcosonogramasResultController.selected}"/>
+                        </f:facet>
+                    </p:dataTable>
+                </p:panel>
+            </h:form>
+
+            <ui:include src="Create.xhtml"/>
+            <ui:include src="Edit.xhtml"/>
+            <ui:include src="View.xhtml"/>
+        </ui:define>
+    </ui:composition>
+
+</html>

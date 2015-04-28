@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcoPrimerTrimestreViewDlg" widgetVar="TblEcoPrimerTrimestreViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewTblEcoPrimerTrimestreTitle}">
+            <h:form id="TblEcoPrimerTrimestreViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcoPrimerTrimestreController.selected != null}">
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_uteAnexLongitudinal}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.uteAnexLongitudinal}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_uteAnexLongitudinal}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_idEcoPrimerTrimestre}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.idEcoPrimerTrimestre}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_idEcoPrimerTrimestre}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_idpaciente}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.idpaciente}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_idpaciente}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_uteAnexAP}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.uteAnexAP}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_uteAnexAP}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_uteAnexTranverso}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.uteAnexTranverso}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_uteAnexTranverso}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_uteAnexLongitudCervical}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.uteAnexLongitudCervical}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_uteAnexLongitudCervical}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_sacoDms}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.sacoDms}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_sacoDms}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_sacoEquivalente}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.sacoEquivalente}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_sacoEquivalente}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_sacoCaracteristicas}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.sacoCaracteristicas}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_sacoCaracteristicas}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_embrionVisualizable}"/>
+                        <p:selectBooleanCheckbox value="#{tblEcoPrimerTrimestreController.selected.embrionVisualizable}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_embrionNovisualizable}"/>
+                        <p:selectBooleanCheckbox value="#{tblEcoPrimerTrimestreController.selected.embrionNovisualizable}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_embrionActivCardiaca}"/>
+                        <p:selectBooleanCheckbox value="#{tblEcoPrimerTrimestreController.selected.embrionActivCardiaca}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_embrionLcc}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.embrionLcc}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_embrionLcc}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_embrionEquivalente}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.embrionEquivalente}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_embrionEquivalente}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_embrionVisculaVitelina}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.embrionVisculaVitelina}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_embrionVisculaVitelina}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_hallazgos}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.hallazgos}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_hallazgos}"/>
+                        <h:outputText value="#{bundle.ViewTblEcoPrimerTrimestreLabel_conclusiones}"/>
+                        <h:outputText value="#{tblEcoPrimerTrimestreController.selected.conclusiones}" title="#{bundle.ViewTblEcoPrimerTrimestreTitle_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="TblEcoPrimerTrimestreViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

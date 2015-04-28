@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcoSegundoTercerTrimestreCreateDlg" widgetVar="TblEcoSegundoTercerTrimestreCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle}">
+            <h:form id="TblEcoSegundoTercerTrimestreCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcoSegundoTercerTrimestreController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_idEcoSegundoTercerTrimestre}" for="idEcoSegundoTercerTrimestre" />
+                        <p:inputText id="idEcoSegundoTercerTrimestre" value="#{tblEcoSegundoTercerTrimestreController.selected.idEcoSegundoTercerTrimestre}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_idEcoSegundoTercerTrimestre}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_idEcoSegundoTercerTrimestre}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_idPaciente}" for="idPaciente" />
+                        <p:inputText id="idPaciente" value="#{tblEcoSegundoTercerTrimestreController.selected.idPaciente}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_idPaciente}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_idPaciente}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_fur}" for="fur" />
+                        <p:inputText id="fur" value="#{tblEcoSegundoTercerTrimestreController.selected.fur}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_fur}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_fur}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_fpp}" for="fpp" />
+                        <p:inputText id="fpp" value="#{tblEcoSegundoTercerTrimestreController.selected.fpp}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_fpp}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_fpp}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_eg}" for="eg" />
+                        <p:inputText id="eg" value="#{tblEcoSegundoTercerTrimestreController.selected.eg}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_eg}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_eg}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_feto}" for="feto" />
+                        <p:inputText id="feto" value="#{tblEcoSegundoTercerTrimestreController.selected.feto}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_feto}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_feto}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_presentacion}" for="presentacion" />
+                        <p:inputText id="presentacion" value="#{tblEcoSegundoTercerTrimestreController.selected.presentacion}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_presentacion}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_presentacion}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_situacion}" for="situacion" />
+                        <p:inputText id="situacion" value="#{tblEcoSegundoTercerTrimestreController.selected.situacion}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_situacion}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_situacion}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_posicion}" for="posicion" />
+                        <p:inputText id="posicion" value="#{tblEcoSegundoTercerTrimestreController.selected.posicion}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_posicion}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_posicion}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioDbp}" for="bioDbp" />
+                        <p:inputText id="bioDbp" value="#{tblEcoSegundoTercerTrimestreController.selected.bioDbp}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioDbp}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioDbp}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioFemur}" for="bioFemur" />
+                        <p:inputText id="bioFemur" value="#{tblEcoSegundoTercerTrimestreController.selected.bioFemur}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioFemur}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioFemur}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioCerebelo}" for="bioCerebelo" />
+                        <p:inputText id="bioCerebelo" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCerebelo}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioCerebelo}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioCerebelo}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioIla}" for="bioIla" />
+                        <p:inputText id="bioIla" value="#{tblEcoSegundoTercerTrimestreController.selected.bioIla}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioIla}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioIla}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioCc}" for="bioCc" />
+                        <p:inputText id="bioCc" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCc}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioCc}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioCc}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioTibia}" for="bioTibia" />
+                        <p:inputText id="bioTibia" value="#{tblEcoSegundoTercerTrimestreController.selected.bioTibia}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioTibia}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioTibia}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioAtrio}" for="bioAtrio" />
+                        <p:inputText id="bioAtrio" value="#{tblEcoSegundoTercerTrimestreController.selected.bioAtrio}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioAtrio}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioAtrio}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioPef}" for="bioPef" />
+                        <p:inputText id="bioPef" value="#{tblEcoSegundoTercerTrimestreController.selected.bioPef}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioPef}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioPef}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioCa}" for="bioCa" />
+                        <p:inputText id="bioCa" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCa}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioCa}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioCa}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioHumero}" for="bioHumero" />
+                        <p:inputText id="bioHumero" value="#{tblEcoSegundoTercerTrimestreController.selected.bioHumero}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioHumero}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioHumero}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioCMagna}" for="bioCMagna" />
+                        <p:inputText id="bioCMagna" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCMagna}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioCMagna}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioCMagna}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_bioSexo}" for="bioSexo" />
+                        <p:inputText id="bioSexo" value="#{tblEcoSegundoTercerTrimestreController.selected.bioSexo}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_bioSexo}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_bioSexo}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_nodf}" for="nodf" />
+                        <p:inputText id="nodf" value="#{tblEcoSegundoTercerTrimestreController.selected.nodf}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_nodf}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_nodf}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_nopt}" for="nopt" />
+                        <p:inputText id="nopt" value="#{tblEcoSegundoTercerTrimestreController.selected.nopt}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_nopt}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_nopt}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_noph}" for="noph" />
+                        <p:inputText id="noph" value="#{tblEcoSegundoTercerTrimestreController.selected.noph}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_noph}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_noph}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatCraneo}" for="anatCraneo" />
+                        <p:inputText id="anatCraneo" value="#{tblEcoSegundoTercerTrimestreController.selected.anatCraneo}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatCraneo}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatCraneo}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatRinones}" for="anatRinones" />
+                        <p:inputText id="anatRinones" value="#{tblEcoSegundoTercerTrimestreController.selected.anatRinones}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatRinones}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatRinones}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatColumna}" for="anatColumna" />
+                        <p:inputText id="anatColumna" value="#{tblEcoSegundoTercerTrimestreController.selected.anatColumna}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatColumna}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatColumna}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatEstomago}" for="anatEstomago" />
+                        <p:inputText id="anatEstomago" value="#{tblEcoSegundoTercerTrimestreController.selected.anatEstomago}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatEstomago}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatEstomago}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatRostro}" for="anatRostro" />
+                        <p:inputText id="anatRostro" value="#{tblEcoSegundoTercerTrimestreController.selected.anatRostro}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatRostro}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatRostro}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatVejiga}" for="anatVejiga" />
+                        <p:inputText id="anatVejiga" value="#{tblEcoSegundoTercerTrimestreController.selected.anatVejiga}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatVejiga}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatVejiga}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatCorazon}" for="anatCorazon" />
+                        <p:inputText id="anatCorazon" value="#{tblEcoSegundoTercerTrimestreController.selected.anatCorazon}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatCorazon}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatCorazon}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatExtremidades}" for="anatExtremidades" />
+                        <p:inputText id="anatExtremidades" value="#{tblEcoSegundoTercerTrimestreController.selected.anatExtremidades}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatExtremidades}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatExtremidades}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatAbdomen}" for="anatAbdomen" />
+                        <p:inputText id="anatAbdomen" value="#{tblEcoSegundoTercerTrimestreController.selected.anatAbdomen}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatAbdomen}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatAbdomen}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatCordon}" for="anatCordon" />
+                        <p:inputText id="anatCordon" value="#{tblEcoSegundoTercerTrimestreController.selected.anatCordon}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatCordon}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatCordon}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatIntestino}" for="anatIntestino" />
+                        <p:inputText id="anatIntestino" value="#{tblEcoSegundoTercerTrimestreController.selected.anatIntestino}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatIntestino}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatIntestino}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_anatPlacenta}" for="anatPlacenta" />
+                        <p:inputText id="anatPlacenta" value="#{tblEcoSegundoTercerTrimestreController.selected.anatPlacenta}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_anatPlacenta}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_anatPlacenta}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_perfilTono}" for="perfilTono" />
+                        <p:inputText id="perfilTono" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilTono}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_perfilTono}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_perfilTono}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_perfilMF}" for="perfilMF" />
+                        <p:inputText id="perfilMF" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilMF}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_perfilMF}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_perfilMF}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_perfilMr}" for="perfilMr" />
+                        <p:inputText id="perfilMr" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilMr}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_perfilMr}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_perfilMr}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_perfilLa}" for="perfilLa" />
+                        <p:inputText id="perfilLa" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilLa}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_perfilLa}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_perfilLa}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_perfilPuntos}" for="perfilPuntos" />
+                        <p:inputText id="perfilPuntos" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilPuntos}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_perfilPuntos}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_perfilPuntos}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoSegundoTercerTrimestreLabel_conclusiones}" for="conclusiones" />
+                        <p:inputText id="conclusiones" value="#{tblEcoSegundoTercerTrimestreController.selected.conclusiones}" title="#{bundle.CreateTblEcoSegundoTercerTrimestreTitle_conclusiones}" required="true" requiredMessage="#{bundle.CreateTblEcoSegundoTercerTrimestreRequiredMessage_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblEcoSegundoTercerTrimestreController.create}" value="#{bundle.Save}" update="display,:TblEcoSegundoTercerTrimestreListForm:datalist,:growl" oncomplete="handleSubmit(args,'TblEcoSegundoTercerTrimestreCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblEcoSegundoTercerTrimestreCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

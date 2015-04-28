@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTblControlPrenatalTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+            <h:form id="TblControlPrenatalListForm">
+                <p:panel header="#{bundle.ListTblControlPrenatalTitle}">
+                    <p:dataTable id="datalist" value="#{tblControlPrenatalController.items}" var="item"
+                                 selectionMode="single" selection="#{tblControlPrenatalController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.idcontrolprenatal}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                        <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
+                        <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_idcontrolprenatal}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idcontrolprenatal}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_fechaconsulta}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fechaconsulta}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_ta}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ta}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_peso}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.peso}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_au}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.au}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_fcf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fcf}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_eg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.eg}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_cita}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cita}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_tipaje}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipaje}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_serologiaviral}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.serologiaviral}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_citologia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.citologia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labHB}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labHB}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labHTO}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labHTO}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labPLAQ}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labPLAQ}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labCB}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labCB}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labSEG}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labSEG}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labLINF}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labLINF}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labEOSF}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labEOSF}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labGLICEMIA}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labGLICEMIA}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labUREA}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labUREA}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labCREATININA}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labCREATININA}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labTGO}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labTGO}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labTGP}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labTGP}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labLDH}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labLDH}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labBT}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labBT}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labBD}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labBD}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labNI}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labNI}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labPROTEINAST}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labPROTEINAST}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labELECTROLITOS}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labELECTROLITOS}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labHIV}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labHIV}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labVDRL}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labVDRL}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labPT}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labPT}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_labPTT}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.labPTT}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_uroanalisis}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.uroanalisis}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_urocultivo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.urocultivo}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_ecosonograma}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ecosonograma}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_observaciones}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.observaciones}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_indicaciones}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.indicaciones}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblControlPrenatalTitle_idpaciente}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idpaciente}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{tblControlPrenatalController.prepareCreate}" update=":TblControlPrenatalCreateForm" oncomplete="PF('TblControlPrenatalCreateDialog').show()"/>
+                            <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":TblControlPrenatalViewForm" oncomplete="PF('TblControlPrenatalViewDialog').show()" disabled="#{empty tblControlPrenatalController.selected}"/>
+                            <p:commandButton id="editButton"   icon="ui-icon-pencil" value="#{bundle.Edit}" update=":TblControlPrenatalEditForm" oncomplete="PF('TblControlPrenatalEditDialog').show()" disabled="#{empty tblControlPrenatalController.selected}"/>
+                            <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="#{bundle.Delete}" actionListener="#{tblControlPrenatalController.destroy}" update=":growl,datalist" disabled="#{empty tblControlPrenatalController.selected}"/>
+                        </f:facet>
+                    </p:dataTable>
+                </p:panel>
+            </h:form>
+
+            <ui:include src="Create.xhtml"/>
+            <ui:include src="Edit.xhtml"/>
+            <ui:include src="View.xhtml"/>
+        </ui:define>
+    </ui:composition>
+
+</html>

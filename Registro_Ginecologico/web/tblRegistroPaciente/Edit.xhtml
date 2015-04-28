@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblRegistroPacienteEditDlg" widgetVar="TblRegistroPacienteEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditTblRegistroPacienteTitle}">
+            <h:form id="TblRegistroPacienteEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblRegistroPacienteController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_idpaciente}" for="idpaciente" />
+                        <p:inputText id="idpaciente" value="#{tblRegistroPacienteController.selected.idpaciente}" title="#{bundle.EditTblRegistroPacienteTitle_idpaciente}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_idpaciente}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_nombre}" for="nombre" />
+                        <p:inputText id="nombre" value="#{tblRegistroPacienteController.selected.nombre}" title="#{bundle.EditTblRegistroPacienteTitle_nombre}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_nombre}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_apellido}" for="apellido" />
+                        <p:inputText id="apellido" value="#{tblRegistroPacienteController.selected.apellido}" title="#{bundle.EditTblRegistroPacienteTitle_apellido}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_apellido}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_ci}" for="ci" />
+                        <p:inputText id="ci" value="#{tblRegistroPacienteController.selected.ci}" title="#{bundle.EditTblRegistroPacienteTitle_ci}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_ci}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_fechanacimiento}" for="fechanacimiento" />
+                        <p:calendar id="fechanacimiento" pattern="MM/dd/yyyy" value="#{tblRegistroPacienteController.selected.fechanacimiento}" title="#{bundle.EditTblRegistroPacienteTitle_fechanacimiento}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_fechanacimiento}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_tlf}" for="tlf" />
+                        <p:inputText id="tlf" value="#{tblRegistroPacienteController.selected.tlf}" title="#{bundle.EditTblRegistroPacienteTitle_tlf}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_tlf}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_direccion}" for="direccion" />
+                        <p:inputText id="direccion" value="#{tblRegistroPacienteController.selected.direccion}" title="#{bundle.EditTblRegistroPacienteTitle_direccion}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_direccion}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antfamiliares}" for="antfamiliares" />
+                        <p:inputText id="antfamiliares" value="#{tblRegistroPacienteController.selected.antfamiliares}" title="#{bundle.EditTblRegistroPacienteTitle_antfamiliares}" />
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antpersonsales}" for="antpersonsales" />
+                        <p:inputText id="antpersonsales" value="#{tblRegistroPacienteController.selected.antpersonsales}" title="#{bundle.EditTblRegistroPacienteTitle_antpersonsales}" />
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecomenarquia}" for="antginecomenarquia" />
+                        <p:inputText id="antginecomenarquia" value="#{tblRegistroPacienteController.selected.antginecomenarquia}" title="#{bundle.EditTblRegistroPacienteTitle_antginecomenarquia}" />
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecosexarquia}" for="antginecosexarquia" />
+                        <p:inputText id="antginecosexarquia" value="#{tblRegistroPacienteController.selected.antginecosexarquia}" title="#{bundle.EditTblRegistroPacienteTitle_antginecosexarquia}" />
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_numparejassexuales}" for="numparejassexuales" />
+                        <p:inputText id="numparejassexuales" value="#{tblRegistroPacienteController.selected.numparejassexuales}" title="#{bundle.EditTblRegistroPacienteTitle_numparejassexuales}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_numparejassexuales}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecociclos}" for="antginecociclos" />
+                        <p:inputText id="antginecociclos" value="#{tblRegistroPacienteController.selected.antginecociclos}" title="#{bundle.EditTblRegistroPacienteTitle_antginecociclos}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecociclos}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecogestas}" for="antginecogestas" />
+                        <p:inputText id="antginecogestas" value="#{tblRegistroPacienteController.selected.antginecogestas}" title="#{bundle.EditTblRegistroPacienteTitle_antginecogestas}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecogestas}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecoparas}" for="antginecoparas" />
+                        <p:inputText id="antginecoparas" value="#{tblRegistroPacienteController.selected.antginecoparas}" title="#{bundle.EditTblRegistroPacienteTitle_antginecoparas}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecoparas}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecoabortos}" for="antginecoabortos" />
+                        <p:inputText id="antginecoabortos" value="#{tblRegistroPacienteController.selected.antginecoabortos}" title="#{bundle.EditTblRegistroPacienteTitle_antginecoabortos}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecoabortos}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecopmf}" for="antginecopmf" />
+                        <p:inputText id="antginecopmf" value="#{tblRegistroPacienteController.selected.antginecopmf}" title="#{bundle.EditTblRegistroPacienteTitle_antginecopmf}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecopmf}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecofur}" for="antginecofur" />
+                        <p:inputText id="antginecofur" value="#{tblRegistroPacienteController.selected.antginecofur}" title="#{bundle.EditTblRegistroPacienteTitle_antginecofur}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecofur}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecofpp}" for="antginecofpp" />
+                        <p:inputText id="antginecofpp" value="#{tblRegistroPacienteController.selected.antginecofpp}" title="#{bundle.EditTblRegistroPacienteTitle_antginecofpp}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecofpp}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_antginecoeg}" for="antginecoeg" />
+                        <p:inputText id="antginecoeg" value="#{tblRegistroPacienteController.selected.antginecoeg}" title="#{bundle.EditTblRegistroPacienteTitle_antginecoeg}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_antginecoeg}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_ta}" for="ta" />
+                        <p:inputText id="ta" value="#{tblRegistroPacienteController.selected.ta}" title="#{bundle.EditTblRegistroPacienteTitle_ta}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_ta}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_peso}" for="peso" />
+                        <p:inputText id="peso" value="#{tblRegistroPacienteController.selected.peso}" title="#{bundle.EditTblRegistroPacienteTitle_peso}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_peso}"/>
+                        <p:outputLabel value="#{bundle.EditTblRegistroPacienteLabel_talla}" for="talla" />
+                        <p:inputText id="talla" value="#{tblRegistroPacienteController.selected.talla}" title="#{bundle.EditTblRegistroPacienteTitle_talla}" required="true" requiredMessage="#{bundle.EditTblRegistroPacienteRequiredMessage_talla}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblRegistroPacienteController.update}" value="#{bundle.Save}" update="display,:TblRegistroPacienteListForm:datalist,:growl" oncomplete="handleSubmit(args, 'TblRegistroPacienteEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblRegistroPacienteEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

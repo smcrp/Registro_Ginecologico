@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblControlPrenatalViewDlg" widgetVar="TblControlPrenatalViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewTblControlPrenatalTitle}">
+            <h:form id="TblControlPrenatalViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblControlPrenatalController.selected != null}">
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_idcontrolprenatal}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.idcontrolprenatal}" title="#{bundle.ViewTblControlPrenatalTitle_idcontrolprenatal}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_fechaconsulta}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.fechaconsulta}" title="#{bundle.ViewTblControlPrenatalTitle_fechaconsulta}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_ta}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.ta}" title="#{bundle.ViewTblControlPrenatalTitle_ta}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_peso}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.peso}" title="#{bundle.ViewTblControlPrenatalTitle_peso}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_au}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.au}" title="#{bundle.ViewTblControlPrenatalTitle_au}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_fcf}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.fcf}" title="#{bundle.ViewTblControlPrenatalTitle_fcf}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_eg}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.eg}" title="#{bundle.ViewTblControlPrenatalTitle_eg}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_cita}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.cita}" title="#{bundle.ViewTblControlPrenatalTitle_cita}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_tipaje}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.tipaje}" title="#{bundle.ViewTblControlPrenatalTitle_tipaje}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_serologiaviral}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.serologiaviral}" title="#{bundle.ViewTblControlPrenatalTitle_serologiaviral}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_citologia}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.citologia}" title="#{bundle.ViewTblControlPrenatalTitle_citologia}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labHB}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labHB}" title="#{bundle.ViewTblControlPrenatalTitle_labHB}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labHTO}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labHTO}" title="#{bundle.ViewTblControlPrenatalTitle_labHTO}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labPLAQ}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labPLAQ}" title="#{bundle.ViewTblControlPrenatalTitle_labPLAQ}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labCB}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labCB}" title="#{bundle.ViewTblControlPrenatalTitle_labCB}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labSEG}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labSEG}" title="#{bundle.ViewTblControlPrenatalTitle_labSEG}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labLINF}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labLINF}" title="#{bundle.ViewTblControlPrenatalTitle_labLINF}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labEOSF}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labEOSF}" title="#{bundle.ViewTblControlPrenatalTitle_labEOSF}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labGLICEMIA}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labGLICEMIA}" title="#{bundle.ViewTblControlPrenatalTitle_labGLICEMIA}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labUREA}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labUREA}" title="#{bundle.ViewTblControlPrenatalTitle_labUREA}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labCREATININA}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labCREATININA}" title="#{bundle.ViewTblControlPrenatalTitle_labCREATININA}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labTGO}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labTGO}" title="#{bundle.ViewTblControlPrenatalTitle_labTGO}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labTGP}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labTGP}" title="#{bundle.ViewTblControlPrenatalTitle_labTGP}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labLDH}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labLDH}" title="#{bundle.ViewTblControlPrenatalTitle_labLDH}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labBT}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labBT}" title="#{bundle.ViewTblControlPrenatalTitle_labBT}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labBD}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labBD}" title="#{bundle.ViewTblControlPrenatalTitle_labBD}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labNI}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labNI}" title="#{bundle.ViewTblControlPrenatalTitle_labNI}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labPROTEINAST}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labPROTEINAST}" title="#{bundle.ViewTblControlPrenatalTitle_labPROTEINAST}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labELECTROLITOS}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labELECTROLITOS}" title="#{bundle.ViewTblControlPrenatalTitle_labELECTROLITOS}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labHIV}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labHIV}" title="#{bundle.ViewTblControlPrenatalTitle_labHIV}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labVDRL}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labVDRL}" title="#{bundle.ViewTblControlPrenatalTitle_labVDRL}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labPT}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labPT}" title="#{bundle.ViewTblControlPrenatalTitle_labPT}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_labPTT}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.labPTT}" title="#{bundle.ViewTblControlPrenatalTitle_labPTT}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_uroanalisis}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.uroanalisis}" title="#{bundle.ViewTblControlPrenatalTitle_uroanalisis}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_urocultivo}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.urocultivo}" title="#{bundle.ViewTblControlPrenatalTitle_urocultivo}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_ecosonograma}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.ecosonograma}" title="#{bundle.ViewTblControlPrenatalTitle_ecosonograma}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_observaciones}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.observaciones}" title="#{bundle.ViewTblControlPrenatalTitle_observaciones}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_indicaciones}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.indicaciones}" title="#{bundle.ViewTblControlPrenatalTitle_indicaciones}"/>
+                        <h:outputText value="#{bundle.ViewTblControlPrenatalLabel_idpaciente}"/>
+                        <h:outputText value="#{tblControlPrenatalController.selected.idpaciente}" title="#{bundle.ViewTblControlPrenatalTitle_idpaciente}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="TblControlPrenatalViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

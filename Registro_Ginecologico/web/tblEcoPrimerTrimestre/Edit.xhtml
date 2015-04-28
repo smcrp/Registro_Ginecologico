@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcoPrimerTrimestreEditDlg" widgetVar="TblEcoPrimerTrimestreEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditTblEcoPrimerTrimestreTitle}">
+            <h:form id="TblEcoPrimerTrimestreEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcoPrimerTrimestreController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_uteAnexLongitudinal}" for="uteAnexLongitudinal" />
+                        <p:inputText id="uteAnexLongitudinal" value="#{tblEcoPrimerTrimestreController.selected.uteAnexLongitudinal}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_uteAnexLongitudinal}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_uteAnexLongitudinal}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_idEcoPrimerTrimestre}" for="idEcoPrimerTrimestre" />
+                        <p:inputText id="idEcoPrimerTrimestre" value="#{tblEcoPrimerTrimestreController.selected.idEcoPrimerTrimestre}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_idEcoPrimerTrimestre}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_idEcoPrimerTrimestre}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_idpaciente}" for="idpaciente" />
+                        <p:inputText id="idpaciente" value="#{tblEcoPrimerTrimestreController.selected.idpaciente}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_idpaciente}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_idpaciente}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_uteAnexAP}" for="uteAnexAP" />
+                        <p:inputText id="uteAnexAP" value="#{tblEcoPrimerTrimestreController.selected.uteAnexAP}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_uteAnexAP}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_uteAnexAP}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_uteAnexTranverso}" for="uteAnexTranverso" />
+                        <p:inputText id="uteAnexTranverso" value="#{tblEcoPrimerTrimestreController.selected.uteAnexTranverso}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_uteAnexTranverso}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_uteAnexTranverso}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_uteAnexLongitudCervical}" for="uteAnexLongitudCervical" />
+                        <p:inputText id="uteAnexLongitudCervical" value="#{tblEcoPrimerTrimestreController.selected.uteAnexLongitudCervical}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_uteAnexLongitudCervical}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_uteAnexLongitudCervical}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_sacoDms}" for="sacoDms" />
+                        <p:inputText id="sacoDms" value="#{tblEcoPrimerTrimestreController.selected.sacoDms}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_sacoDms}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_sacoDms}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_sacoEquivalente}" for="sacoEquivalente" />
+                        <p:inputText id="sacoEquivalente" value="#{tblEcoPrimerTrimestreController.selected.sacoEquivalente}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_sacoEquivalente}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_sacoEquivalente}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_sacoCaracteristicas}" for="sacoCaracteristicas" />
+                        <p:inputText id="sacoCaracteristicas" value="#{tblEcoPrimerTrimestreController.selected.sacoCaracteristicas}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_sacoCaracteristicas}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_sacoCaracteristicas}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_embrionVisualizable}" for="embrionVisualizable" />
+                        <p:selectBooleanCheckbox id="embrionVisualizable" value="#{tblEcoPrimerTrimestreController.selected.embrionVisualizable}" />
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_embrionNovisualizable}" for="embrionNovisualizable" />
+                        <p:selectBooleanCheckbox id="embrionNovisualizable" value="#{tblEcoPrimerTrimestreController.selected.embrionNovisualizable}" />
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_embrionActivCardiaca}" for="embrionActivCardiaca" />
+                        <p:selectBooleanCheckbox id="embrionActivCardiaca" value="#{tblEcoPrimerTrimestreController.selected.embrionActivCardiaca}" />
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_embrionLcc}" for="embrionLcc" />
+                        <p:inputText id="embrionLcc" value="#{tblEcoPrimerTrimestreController.selected.embrionLcc}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_embrionLcc}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_embrionLcc}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_embrionEquivalente}" for="embrionEquivalente" />
+                        <p:inputText id="embrionEquivalente" value="#{tblEcoPrimerTrimestreController.selected.embrionEquivalente}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_embrionEquivalente}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_embrionEquivalente}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_embrionVisculaVitelina}" for="embrionVisculaVitelina" />
+                        <p:inputText id="embrionVisculaVitelina" value="#{tblEcoPrimerTrimestreController.selected.embrionVisculaVitelina}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_embrionVisculaVitelina}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_embrionVisculaVitelina}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_hallazgos}" for="hallazgos" />
+                        <p:inputText id="hallazgos" value="#{tblEcoPrimerTrimestreController.selected.hallazgos}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_hallazgos}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_hallazgos}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoPrimerTrimestreLabel_conclusiones}" for="conclusiones" />
+                        <p:inputText id="conclusiones" value="#{tblEcoPrimerTrimestreController.selected.conclusiones}" title="#{bundle.EditTblEcoPrimerTrimestreTitle_conclusiones}" required="true" requiredMessage="#{bundle.EditTblEcoPrimerTrimestreRequiredMessage_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblEcoPrimerTrimestreController.update}" value="#{bundle.Save}" update="display,:TblEcoPrimerTrimestreListForm:datalist,:growl" oncomplete="handleSubmit(args, 'TblEcoPrimerTrimestreEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblEcoPrimerTrimestreEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

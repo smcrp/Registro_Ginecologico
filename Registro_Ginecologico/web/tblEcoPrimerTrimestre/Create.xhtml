@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcoPrimerTrimestreCreateDlg" widgetVar="TblEcoPrimerTrimestreCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateTblEcoPrimerTrimestreTitle}">
+            <h:form id="TblEcoPrimerTrimestreCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcoPrimerTrimestreController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_uteAnexLongitudinal}" for="uteAnexLongitudinal" />
+                        <p:inputText id="uteAnexLongitudinal" value="#{tblEcoPrimerTrimestreController.selected.uteAnexLongitudinal}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_uteAnexLongitudinal}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_uteAnexLongitudinal}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_idEcoPrimerTrimestre}" for="idEcoPrimerTrimestre" />
+                        <p:inputText id="idEcoPrimerTrimestre" value="#{tblEcoPrimerTrimestreController.selected.idEcoPrimerTrimestre}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_idEcoPrimerTrimestre}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_idEcoPrimerTrimestre}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_idpaciente}" for="idpaciente" />
+                        <p:inputText id="idpaciente" value="#{tblEcoPrimerTrimestreController.selected.idpaciente}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_idpaciente}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_idpaciente}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_uteAnexAP}" for="uteAnexAP" />
+                        <p:inputText id="uteAnexAP" value="#{tblEcoPrimerTrimestreController.selected.uteAnexAP}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_uteAnexAP}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_uteAnexAP}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_uteAnexTranverso}" for="uteAnexTranverso" />
+                        <p:inputText id="uteAnexTranverso" value="#{tblEcoPrimerTrimestreController.selected.uteAnexTranverso}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_uteAnexTranverso}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_uteAnexTranverso}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_uteAnexLongitudCervical}" for="uteAnexLongitudCervical" />
+                        <p:inputText id="uteAnexLongitudCervical" value="#{tblEcoPrimerTrimestreController.selected.uteAnexLongitudCervical}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_uteAnexLongitudCervical}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_uteAnexLongitudCervical}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_sacoDms}" for="sacoDms" />
+                        <p:inputText id="sacoDms" value="#{tblEcoPrimerTrimestreController.selected.sacoDms}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_sacoDms}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_sacoDms}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_sacoEquivalente}" for="sacoEquivalente" />
+                        <p:inputText id="sacoEquivalente" value="#{tblEcoPrimerTrimestreController.selected.sacoEquivalente}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_sacoEquivalente}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_sacoEquivalente}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_sacoCaracteristicas}" for="sacoCaracteristicas" />
+                        <p:inputText id="sacoCaracteristicas" value="#{tblEcoPrimerTrimestreController.selected.sacoCaracteristicas}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_sacoCaracteristicas}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_sacoCaracteristicas}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_embrionVisualizable}" for="embrionVisualizable" />
+                        <p:selectBooleanCheckbox id="embrionVisualizable" value="#{tblEcoPrimerTrimestreController.selected.embrionVisualizable}" />
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_embrionNovisualizable}" for="embrionNovisualizable" />
+                        <p:selectBooleanCheckbox id="embrionNovisualizable" value="#{tblEcoPrimerTrimestreController.selected.embrionNovisualizable}" />
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_embrionActivCardiaca}" for="embrionActivCardiaca" />
+                        <p:selectBooleanCheckbox id="embrionActivCardiaca" value="#{tblEcoPrimerTrimestreController.selected.embrionActivCardiaca}" />
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_embrionLcc}" for="embrionLcc" />
+                        <p:inputText id="embrionLcc" value="#{tblEcoPrimerTrimestreController.selected.embrionLcc}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_embrionLcc}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_embrionLcc}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_embrionEquivalente}" for="embrionEquivalente" />
+                        <p:inputText id="embrionEquivalente" value="#{tblEcoPrimerTrimestreController.selected.embrionEquivalente}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_embrionEquivalente}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_embrionEquivalente}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_embrionVisculaVitelina}" for="embrionVisculaVitelina" />
+                        <p:inputText id="embrionVisculaVitelina" value="#{tblEcoPrimerTrimestreController.selected.embrionVisculaVitelina}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_embrionVisculaVitelina}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_embrionVisculaVitelina}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_hallazgos}" for="hallazgos" />
+                        <p:inputText id="hallazgos" value="#{tblEcoPrimerTrimestreController.selected.hallazgos}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_hallazgos}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_hallazgos}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcoPrimerTrimestreLabel_conclusiones}" for="conclusiones" />
+                        <p:inputText id="conclusiones" value="#{tblEcoPrimerTrimestreController.selected.conclusiones}" title="#{bundle.CreateTblEcoPrimerTrimestreTitle_conclusiones}" required="true" requiredMessage="#{bundle.CreateTblEcoPrimerTrimestreRequiredMessage_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblEcoPrimerTrimestreController.create}" value="#{bundle.Save}" update="display,:TblEcoPrimerTrimestreListForm:datalist,:growl" oncomplete="handleSubmit(args,'TblEcoPrimerTrimestreCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblEcoPrimerTrimestreCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

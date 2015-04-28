@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+            <h:form id="TblEcoSegundoTercerTrimestreListForm">
+                <p:panel header="#{bundle.ListTblEcoSegundoTercerTrimestreTitle}">
+                    <p:dataTable id="datalist" value="#{tblEcoSegundoTercerTrimestreController.items}" var="item"
+                                 selectionMode="single" selection="#{tblEcoSegundoTercerTrimestreController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.idEcoSegundoTercerTrimestre}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                        <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
+                        <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_idEcoSegundoTercerTrimestre}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idEcoSegundoTercerTrimestre}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_idPaciente}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idPaciente}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_fur}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fur}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_fpp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fpp}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_eg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.eg}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_feto}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.feto}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_presentacion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.presentacion}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_situacion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.situacion}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_posicion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.posicion}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioDbp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioDbp}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioFemur}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioFemur}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioCerebelo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioCerebelo}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioIla}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioIla}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioCc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioCc}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioTibia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioTibia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioAtrio}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioAtrio}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioPef}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioPef}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioCa}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioCa}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioHumero}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioHumero}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioCMagna}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioCMagna}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_bioSexo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bioSexo}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_nodf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nodf}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_nopt}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nopt}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_noph}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.noph}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatCraneo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatCraneo}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatRinones}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatRinones}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatColumna}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatColumna}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatEstomago}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatEstomago}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatRostro}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatRostro}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatVejiga}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatVejiga}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatCorazon}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatCorazon}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatExtremidades}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatExtremidades}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatAbdomen}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatAbdomen}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatCordon}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatCordon}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatIntestino}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatIntestino}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_anatPlacenta}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anatPlacenta}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_perfilTono}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.perfilTono}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_perfilMF}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.perfilMF}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_perfilMr}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.perfilMr}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_perfilLa}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.perfilLa}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_perfilPuntos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.perfilPuntos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblEcoSegundoTercerTrimestreTitle_conclusiones}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.conclusiones}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{tblEcoSegundoTercerTrimestreController.prepareCreate}" update=":TblEcoSegundoTercerTrimestreCreateForm" oncomplete="PF('TblEcoSegundoTercerTrimestreCreateDialog').show()"/>
+                            <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":TblEcoSegundoTercerTrimestreViewForm" oncomplete="PF('TblEcoSegundoTercerTrimestreViewDialog').show()" disabled="#{empty tblEcoSegundoTercerTrimestreController.selected}"/>
+                            <p:commandButton id="editButton"   icon="ui-icon-pencil" value="#{bundle.Edit}" update=":TblEcoSegundoTercerTrimestreEditForm" oncomplete="PF('TblEcoSegundoTercerTrimestreEditDialog').show()" disabled="#{empty tblEcoSegundoTercerTrimestreController.selected}"/>
+                            <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="#{bundle.Delete}" actionListener="#{tblEcoSegundoTercerTrimestreController.destroy}" update=":growl,datalist" disabled="#{empty tblEcoSegundoTercerTrimestreController.selected}"/>
+                        </f:facet>
+                    </p:dataTable>
+                </p:panel>
+            </h:form>
+
+            <ui:include src="Create.xhtml"/>
+            <ui:include src="Edit.xhtml"/>
+            <ui:include src="View.xhtml"/>
+        </ui:define>
+    </ui:composition>
+
+</html>

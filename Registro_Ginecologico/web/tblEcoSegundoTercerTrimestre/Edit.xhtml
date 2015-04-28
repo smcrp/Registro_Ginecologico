@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcoSegundoTercerTrimestreEditDlg" widgetVar="TblEcoSegundoTercerTrimestreEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditTblEcoSegundoTercerTrimestreTitle}">
+            <h:form id="TblEcoSegundoTercerTrimestreEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcoSegundoTercerTrimestreController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_idEcoSegundoTercerTrimestre}" for="idEcoSegundoTercerTrimestre" />
+                        <p:inputText id="idEcoSegundoTercerTrimestre" value="#{tblEcoSegundoTercerTrimestreController.selected.idEcoSegundoTercerTrimestre}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_idEcoSegundoTercerTrimestre}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_idEcoSegundoTercerTrimestre}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_idPaciente}" for="idPaciente" />
+                        <p:inputText id="idPaciente" value="#{tblEcoSegundoTercerTrimestreController.selected.idPaciente}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_idPaciente}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_idPaciente}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_fur}" for="fur" />
+                        <p:inputText id="fur" value="#{tblEcoSegundoTercerTrimestreController.selected.fur}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_fur}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_fur}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_fpp}" for="fpp" />
+                        <p:inputText id="fpp" value="#{tblEcoSegundoTercerTrimestreController.selected.fpp}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_fpp}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_fpp}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_eg}" for="eg" />
+                        <p:inputText id="eg" value="#{tblEcoSegundoTercerTrimestreController.selected.eg}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_eg}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_eg}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_feto}" for="feto" />
+                        <p:inputText id="feto" value="#{tblEcoSegundoTercerTrimestreController.selected.feto}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_feto}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_feto}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_presentacion}" for="presentacion" />
+                        <p:inputText id="presentacion" value="#{tblEcoSegundoTercerTrimestreController.selected.presentacion}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_presentacion}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_presentacion}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_situacion}" for="situacion" />
+                        <p:inputText id="situacion" value="#{tblEcoSegundoTercerTrimestreController.selected.situacion}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_situacion}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_situacion}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_posicion}" for="posicion" />
+                        <p:inputText id="posicion" value="#{tblEcoSegundoTercerTrimestreController.selected.posicion}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_posicion}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_posicion}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioDbp}" for="bioDbp" />
+                        <p:inputText id="bioDbp" value="#{tblEcoSegundoTercerTrimestreController.selected.bioDbp}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioDbp}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioDbp}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioFemur}" for="bioFemur" />
+                        <p:inputText id="bioFemur" value="#{tblEcoSegundoTercerTrimestreController.selected.bioFemur}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioFemur}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioFemur}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioCerebelo}" for="bioCerebelo" />
+                        <p:inputText id="bioCerebelo" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCerebelo}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioCerebelo}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioCerebelo}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioIla}" for="bioIla" />
+                        <p:inputText id="bioIla" value="#{tblEcoSegundoTercerTrimestreController.selected.bioIla}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioIla}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioIla}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioCc}" for="bioCc" />
+                        <p:inputText id="bioCc" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCc}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioCc}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioCc}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioTibia}" for="bioTibia" />
+                        <p:inputText id="bioTibia" value="#{tblEcoSegundoTercerTrimestreController.selected.bioTibia}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioTibia}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioTibia}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioAtrio}" for="bioAtrio" />
+                        <p:inputText id="bioAtrio" value="#{tblEcoSegundoTercerTrimestreController.selected.bioAtrio}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioAtrio}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioAtrio}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioPef}" for="bioPef" />
+                        <p:inputText id="bioPef" value="#{tblEcoSegundoTercerTrimestreController.selected.bioPef}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioPef}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioPef}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioCa}" for="bioCa" />
+                        <p:inputText id="bioCa" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCa}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioCa}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioCa}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioHumero}" for="bioHumero" />
+                        <p:inputText id="bioHumero" value="#{tblEcoSegundoTercerTrimestreController.selected.bioHumero}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioHumero}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioHumero}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioCMagna}" for="bioCMagna" />
+                        <p:inputText id="bioCMagna" value="#{tblEcoSegundoTercerTrimestreController.selected.bioCMagna}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioCMagna}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioCMagna}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_bioSexo}" for="bioSexo" />
+                        <p:inputText id="bioSexo" value="#{tblEcoSegundoTercerTrimestreController.selected.bioSexo}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_bioSexo}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_bioSexo}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_nodf}" for="nodf" />
+                        <p:inputText id="nodf" value="#{tblEcoSegundoTercerTrimestreController.selected.nodf}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_nodf}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_nodf}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_nopt}" for="nopt" />
+                        <p:inputText id="nopt" value="#{tblEcoSegundoTercerTrimestreController.selected.nopt}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_nopt}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_nopt}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_noph}" for="noph" />
+                        <p:inputText id="noph" value="#{tblEcoSegundoTercerTrimestreController.selected.noph}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_noph}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_noph}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatCraneo}" for="anatCraneo" />
+                        <p:inputText id="anatCraneo" value="#{tblEcoSegundoTercerTrimestreController.selected.anatCraneo}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatCraneo}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatCraneo}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatRinones}" for="anatRinones" />
+                        <p:inputText id="anatRinones" value="#{tblEcoSegundoTercerTrimestreController.selected.anatRinones}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatRinones}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatRinones}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatColumna}" for="anatColumna" />
+                        <p:inputText id="anatColumna" value="#{tblEcoSegundoTercerTrimestreController.selected.anatColumna}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatColumna}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatColumna}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatEstomago}" for="anatEstomago" />
+                        <p:inputText id="anatEstomago" value="#{tblEcoSegundoTercerTrimestreController.selected.anatEstomago}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatEstomago}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatEstomago}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatRostro}" for="anatRostro" />
+                        <p:inputText id="anatRostro" value="#{tblEcoSegundoTercerTrimestreController.selected.anatRostro}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatRostro}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatRostro}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatVejiga}" for="anatVejiga" />
+                        <p:inputText id="anatVejiga" value="#{tblEcoSegundoTercerTrimestreController.selected.anatVejiga}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatVejiga}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatVejiga}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatCorazon}" for="anatCorazon" />
+                        <p:inputText id="anatCorazon" value="#{tblEcoSegundoTercerTrimestreController.selected.anatCorazon}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatCorazon}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatCorazon}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatExtremidades}" for="anatExtremidades" />
+                        <p:inputText id="anatExtremidades" value="#{tblEcoSegundoTercerTrimestreController.selected.anatExtremidades}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatExtremidades}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatExtremidades}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatAbdomen}" for="anatAbdomen" />
+                        <p:inputText id="anatAbdomen" value="#{tblEcoSegundoTercerTrimestreController.selected.anatAbdomen}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatAbdomen}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatAbdomen}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatCordon}" for="anatCordon" />
+                        <p:inputText id="anatCordon" value="#{tblEcoSegundoTercerTrimestreController.selected.anatCordon}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatCordon}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatCordon}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatIntestino}" for="anatIntestino" />
+                        <p:inputText id="anatIntestino" value="#{tblEcoSegundoTercerTrimestreController.selected.anatIntestino}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatIntestino}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatIntestino}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_anatPlacenta}" for="anatPlacenta" />
+                        <p:inputText id="anatPlacenta" value="#{tblEcoSegundoTercerTrimestreController.selected.anatPlacenta}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_anatPlacenta}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_anatPlacenta}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_perfilTono}" for="perfilTono" />
+                        <p:inputText id="perfilTono" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilTono}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_perfilTono}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_perfilTono}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_perfilMF}" for="perfilMF" />
+                        <p:inputText id="perfilMF" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilMF}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_perfilMF}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_perfilMF}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_perfilMr}" for="perfilMr" />
+                        <p:inputText id="perfilMr" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilMr}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_perfilMr}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_perfilMr}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_perfilLa}" for="perfilLa" />
+                        <p:inputText id="perfilLa" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilLa}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_perfilLa}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_perfilLa}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_perfilPuntos}" for="perfilPuntos" />
+                        <p:inputText id="perfilPuntos" value="#{tblEcoSegundoTercerTrimestreController.selected.perfilPuntos}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_perfilPuntos}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_perfilPuntos}"/>
+                        <p:outputLabel value="#{bundle.EditTblEcoSegundoTercerTrimestreLabel_conclusiones}" for="conclusiones" />
+                        <p:inputText id="conclusiones" value="#{tblEcoSegundoTercerTrimestreController.selected.conclusiones}" title="#{bundle.EditTblEcoSegundoTercerTrimestreTitle_conclusiones}" required="true" requiredMessage="#{bundle.EditTblEcoSegundoTercerTrimestreRequiredMessage_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblEcoSegundoTercerTrimestreController.update}" value="#{bundle.Save}" update="display,:TblEcoSegundoTercerTrimestreListForm:datalist,:growl" oncomplete="handleSubmit(args, 'TblEcoSegundoTercerTrimestreEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblEcoSegundoTercerTrimestreEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

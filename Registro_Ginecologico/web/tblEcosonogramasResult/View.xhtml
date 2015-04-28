@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcosonogramasResultViewDlg" widgetVar="TblEcosonogramasResultViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewTblEcosonogramasResultTitle}">
+            <h:form id="TblEcosonogramasResultViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcosonogramasResultController.selected != null}">
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_idpaciente}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.idpaciente}" title="#{bundle.ViewTblEcosonogramasResultTitle_idpaciente}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_idecosonogramas}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.idecosonogramas}" title="#{bundle.ViewTblEcosonogramasResultTitle_idecosonogramas}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_utAVF}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.utAVF}" title="#{bundle.ViewTblEcosonogramasResultTitle_utAVF}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_utRVF}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.utRVF}" title="#{bundle.ViewTblEcosonogramasResultTitle_utRVF}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_utIndiferente}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.utIndiferente}" title="#{bundle.ViewTblEcosonogramasResultTitle_utIndiferente}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_utSuperRegular}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.utSuperRegular}" title="#{bundle.ViewTblEcosonogramasResultTitle_utSuperRegular}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_utSuperIrregular}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.utSuperIrregular}" title="#{bundle.ViewTblEcosonogramasResultTitle_utSuperIrregular}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ecopatronHomog}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ecopatronHomog}" title="#{bundle.ViewTblEcosonogramasResultTitle_ecopatronHomog}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ecopatronHeterog}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ecopatronHeterog}" title="#{bundle.ViewTblEcosonogramasResultTitle_ecopatronHeterog}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_dimensionesL}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.dimensionesL}" title="#{bundle.ViewTblEcosonogramasResultTitle_dimensionesL}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_dimensionesAP}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.dimensionesAP}" title="#{bundle.ViewTblEcosonogramasResultTitle_dimensionesAP}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_dimensionesT}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.dimensionesT}" title="#{bundle.ViewTblEcosonogramasResultTitle_dimensionesT}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_cervixL}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.cervixL}" title="#{bundle.ViewTblEcosonogramasResultTitle_cervixL}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_cervixAP}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.cervixAP}" title="#{bundle.ViewTblEcosonogramasResultTitle_cervixAP}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_utOtros}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.utOtros}" title="#{bundle.ViewTblEcosonogramasResultTitle_utOtros}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_interfEndometHomog}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.interfEndometHomog}" title="#{bundle.ViewTblEcosonogramasResultTitle_interfEndometHomog}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_interfEndometHetero}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.interfEndometHetero}" title="#{bundle.ViewTblEcosonogramasResultTitle_interfEndometHetero}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_interfEndometEspesor}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.interfEndometEspesor}" title="#{bundle.ViewTblEcosonogramasResultTitle_interfEndometEspesor}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_interfEndometOtros}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.interfEndometOtros}" title="#{bundle.ViewTblEcosonogramasResultTitle_interfEndometOtros}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaDereL}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaDereL}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaDereL}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaDereAP}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaDereAP}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaDereAP}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaDereT}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaDereT}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaDereT}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaDereVOL}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaDereVOL}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaDereVOL}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaIzqL}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaIzqL}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaIzqL}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaIzqAP}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaIzqAP}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaIzqAP}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaIzqT}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaIzqT}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaIzqT}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovaIzqVOL}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovaIzqVOL}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovaIzqVOL}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_ovariosOtros}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.ovariosOtros}" title="#{bundle.ViewTblEcosonogramasResultTitle_ovariosOtros}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_fondoSacoLibre}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.fondoSacoLibre}" title="#{bundle.ViewTblEcosonogramasResultTitle_fondoSacoLibre}"/>
+                        <h:outputText value="#{bundle.ViewTblEcosonogramasResultLabel_conclusiones}"/>
+                        <h:outputText value="#{tblEcosonogramasResultController.selected.conclusiones}" title="#{bundle.ViewTblEcosonogramasResultTitle_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="TblEcosonogramasResultViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

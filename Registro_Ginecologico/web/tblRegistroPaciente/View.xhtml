@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblRegistroPacienteViewDlg" widgetVar="TblRegistroPacienteViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewTblRegistroPacienteTitle}">
+            <h:form id="TblRegistroPacienteViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblRegistroPacienteController.selected != null}">
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_idpaciente}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.idpaciente}" title="#{bundle.ViewTblRegistroPacienteTitle_idpaciente}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_nombre}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.nombre}" title="#{bundle.ViewTblRegistroPacienteTitle_nombre}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_apellido}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.apellido}" title="#{bundle.ViewTblRegistroPacienteTitle_apellido}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_ci}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.ci}" title="#{bundle.ViewTblRegistroPacienteTitle_ci}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_fechanacimiento}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.fechanacimiento}" title="#{bundle.ViewTblRegistroPacienteTitle_fechanacimiento}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_tlf}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.tlf}" title="#{bundle.ViewTblRegistroPacienteTitle_tlf}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_direccion}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.direccion}" title="#{bundle.ViewTblRegistroPacienteTitle_direccion}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antfamiliares}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antfamiliares}" title="#{bundle.ViewTblRegistroPacienteTitle_antfamiliares}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antpersonsales}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antpersonsales}" title="#{bundle.ViewTblRegistroPacienteTitle_antpersonsales}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecomenarquia}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecomenarquia}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecomenarquia}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecosexarquia}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecosexarquia}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecosexarquia}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_numparejassexuales}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.numparejassexuales}" title="#{bundle.ViewTblRegistroPacienteTitle_numparejassexuales}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecociclos}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecociclos}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecociclos}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecogestas}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecogestas}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecogestas}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecoparas}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecoparas}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecoparas}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecoabortos}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecoabortos}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecoabortos}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecopmf}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecopmf}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecopmf}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecofur}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecofur}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecofur}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecofpp}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecofpp}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecofpp}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecoeg}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecoeg}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecoeg}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_ta}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.ta}" title="#{bundle.ViewTblRegistroPacienteTitle_ta}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_peso}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.peso}" title="#{bundle.ViewTblRegistroPacienteTitle_peso}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_talla}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.talla}" title="#{bundle.ViewTblRegistroPacienteTitle_talla}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="TblRegistroPacienteViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

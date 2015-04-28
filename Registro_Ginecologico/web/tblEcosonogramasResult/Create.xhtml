@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblEcosonogramasResultCreateDlg" widgetVar="TblEcosonogramasResultCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateTblEcosonogramasResultTitle}">
+            <h:form id="TblEcosonogramasResultCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblEcosonogramasResultController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_idpaciente}" for="idpaciente" />
+                        <p:inputText id="idpaciente" value="#{tblEcosonogramasResultController.selected.idpaciente}" title="#{bundle.CreateTblEcosonogramasResultTitle_idpaciente}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_idpaciente}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_idecosonogramas}" for="idecosonogramas" />
+                        <p:inputText id="idecosonogramas" value="#{tblEcosonogramasResultController.selected.idecosonogramas}" title="#{bundle.CreateTblEcosonogramasResultTitle_idecosonogramas}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_idecosonogramas}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_utAVF}" for="utAVF" />
+                        <p:inputText id="utAVF" value="#{tblEcosonogramasResultController.selected.utAVF}" title="#{bundle.CreateTblEcosonogramasResultTitle_utAVF}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_utAVF}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_utRVF}" for="utRVF" />
+                        <p:inputText id="utRVF" value="#{tblEcosonogramasResultController.selected.utRVF}" title="#{bundle.CreateTblEcosonogramasResultTitle_utRVF}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_utRVF}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_utIndiferente}" for="utIndiferente" />
+                        <p:inputText id="utIndiferente" value="#{tblEcosonogramasResultController.selected.utIndiferente}" title="#{bundle.CreateTblEcosonogramasResultTitle_utIndiferente}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_utIndiferente}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_utSuperRegular}" for="utSuperRegular" />
+                        <p:inputText id="utSuperRegular" value="#{tblEcosonogramasResultController.selected.utSuperRegular}" title="#{bundle.CreateTblEcosonogramasResultTitle_utSuperRegular}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_utSuperRegular}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_utSuperIrregular}" for="utSuperIrregular" />
+                        <p:inputText id="utSuperIrregular" value="#{tblEcosonogramasResultController.selected.utSuperIrregular}" title="#{bundle.CreateTblEcosonogramasResultTitle_utSuperIrregular}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_utSuperIrregular}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ecopatronHomog}" for="ecopatronHomog" />
+                        <p:inputText id="ecopatronHomog" value="#{tblEcosonogramasResultController.selected.ecopatronHomog}" title="#{bundle.CreateTblEcosonogramasResultTitle_ecopatronHomog}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ecopatronHomog}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ecopatronHeterog}" for="ecopatronHeterog" />
+                        <p:inputText id="ecopatronHeterog" value="#{tblEcosonogramasResultController.selected.ecopatronHeterog}" title="#{bundle.CreateTblEcosonogramasResultTitle_ecopatronHeterog}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ecopatronHeterog}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_dimensionesL}" for="dimensionesL" />
+                        <p:inputText id="dimensionesL" value="#{tblEcosonogramasResultController.selected.dimensionesL}" title="#{bundle.CreateTblEcosonogramasResultTitle_dimensionesL}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_dimensionesL}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_dimensionesAP}" for="dimensionesAP" />
+                        <p:inputText id="dimensionesAP" value="#{tblEcosonogramasResultController.selected.dimensionesAP}" title="#{bundle.CreateTblEcosonogramasResultTitle_dimensionesAP}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_dimensionesAP}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_dimensionesT}" for="dimensionesT" />
+                        <p:inputText id="dimensionesT" value="#{tblEcosonogramasResultController.selected.dimensionesT}" title="#{bundle.CreateTblEcosonogramasResultTitle_dimensionesT}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_dimensionesT}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_cervixL}" for="cervixL" />
+                        <p:inputText id="cervixL" value="#{tblEcosonogramasResultController.selected.cervixL}" title="#{bundle.CreateTblEcosonogramasResultTitle_cervixL}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_cervixL}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_cervixAP}" for="cervixAP" />
+                        <p:inputText id="cervixAP" value="#{tblEcosonogramasResultController.selected.cervixAP}" title="#{bundle.CreateTblEcosonogramasResultTitle_cervixAP}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_cervixAP}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_utOtros}" for="utOtros" />
+                        <p:inputText id="utOtros" value="#{tblEcosonogramasResultController.selected.utOtros}" title="#{bundle.CreateTblEcosonogramasResultTitle_utOtros}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_utOtros}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_interfEndometHomog}" for="interfEndometHomog" />
+                        <p:inputText id="interfEndometHomog" value="#{tblEcosonogramasResultController.selected.interfEndometHomog}" title="#{bundle.CreateTblEcosonogramasResultTitle_interfEndometHomog}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_interfEndometHomog}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_interfEndometHetero}" for="interfEndometHetero" />
+                        <p:inputText id="interfEndometHetero" value="#{tblEcosonogramasResultController.selected.interfEndometHetero}" title="#{bundle.CreateTblEcosonogramasResultTitle_interfEndometHetero}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_interfEndometHetero}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_interfEndometEspesor}" for="interfEndometEspesor" />
+                        <p:inputText id="interfEndometEspesor" value="#{tblEcosonogramasResultController.selected.interfEndometEspesor}" title="#{bundle.CreateTblEcosonogramasResultTitle_interfEndometEspesor}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_interfEndometEspesor}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_interfEndometOtros}" for="interfEndometOtros" />
+                        <p:inputText id="interfEndometOtros" value="#{tblEcosonogramasResultController.selected.interfEndometOtros}" title="#{bundle.CreateTblEcosonogramasResultTitle_interfEndometOtros}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_interfEndometOtros}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaDereL}" for="ovaDereL" />
+                        <p:inputText id="ovaDereL" value="#{tblEcosonogramasResultController.selected.ovaDereL}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaDereL}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaDereL}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaDereAP}" for="ovaDereAP" />
+                        <p:inputText id="ovaDereAP" value="#{tblEcosonogramasResultController.selected.ovaDereAP}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaDereAP}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaDereAP}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaDereT}" for="ovaDereT" />
+                        <p:inputText id="ovaDereT" value="#{tblEcosonogramasResultController.selected.ovaDereT}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaDereT}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaDereT}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaDereVOL}" for="ovaDereVOL" />
+                        <p:inputText id="ovaDereVOL" value="#{tblEcosonogramasResultController.selected.ovaDereVOL}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaDereVOL}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaDereVOL}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaIzqL}" for="ovaIzqL" />
+                        <p:inputText id="ovaIzqL" value="#{tblEcosonogramasResultController.selected.ovaIzqL}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaIzqL}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaIzqL}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaIzqAP}" for="ovaIzqAP" />
+                        <p:inputText id="ovaIzqAP" value="#{tblEcosonogramasResultController.selected.ovaIzqAP}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaIzqAP}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaIzqAP}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaIzqT}" for="ovaIzqT" />
+                        <p:inputText id="ovaIzqT" value="#{tblEcosonogramasResultController.selected.ovaIzqT}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaIzqT}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaIzqT}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovaIzqVOL}" for="ovaIzqVOL" />
+                        <p:inputText id="ovaIzqVOL" value="#{tblEcosonogramasResultController.selected.ovaIzqVOL}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovaIzqVOL}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovaIzqVOL}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_ovariosOtros}" for="ovariosOtros" />
+                        <p:inputText id="ovariosOtros" value="#{tblEcosonogramasResultController.selected.ovariosOtros}" title="#{bundle.CreateTblEcosonogramasResultTitle_ovariosOtros}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_ovariosOtros}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_fondoSacoLibre}" for="fondoSacoLibre" />
+                        <p:inputText id="fondoSacoLibre" value="#{tblEcosonogramasResultController.selected.fondoSacoLibre}" title="#{bundle.CreateTblEcosonogramasResultTitle_fondoSacoLibre}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_fondoSacoLibre}"/>
+                        <p:outputLabel value="#{bundle.CreateTblEcosonogramasResultLabel_conclusiones}" for="conclusiones" />
+                        <p:inputText id="conclusiones" value="#{tblEcosonogramasResultController.selected.conclusiones}" title="#{bundle.CreateTblEcosonogramasResultTitle_conclusiones}" required="true" requiredMessage="#{bundle.CreateTblEcosonogramasResultRequiredMessage_conclusiones}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblEcosonogramasResultController.create}" value="#{bundle.Save}" update="display,:TblEcosonogramasResultListForm:datalist,:growl" oncomplete="handleSubmit(args,'TblEcosonogramasResultCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblEcosonogramasResultCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

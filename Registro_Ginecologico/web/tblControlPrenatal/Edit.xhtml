@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TblControlPrenatalEditDlg" widgetVar="TblControlPrenatalEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditTblControlPrenatalTitle}">
+            <h:form id="TblControlPrenatalEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tblControlPrenatalController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_idcontrolprenatal}" for="idcontrolprenatal" />
+                        <p:inputText id="idcontrolprenatal" value="#{tblControlPrenatalController.selected.idcontrolprenatal}" title="#{bundle.EditTblControlPrenatalTitle_idcontrolprenatal}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_idcontrolprenatal}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_fechaconsulta}" for="fechaconsulta" />
+                        <p:calendar id="fechaconsulta" pattern="MM/dd/yyyy" value="#{tblControlPrenatalController.selected.fechaconsulta}" title="#{bundle.EditTblControlPrenatalTitle_fechaconsulta}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_fechaconsulta}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_ta}" for="ta" />
+                        <p:inputText id="ta" value="#{tblControlPrenatalController.selected.ta}" title="#{bundle.EditTblControlPrenatalTitle_ta}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_ta}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_peso}" for="peso" />
+                        <p:inputText id="peso" value="#{tblControlPrenatalController.selected.peso}" title="#{bundle.EditTblControlPrenatalTitle_peso}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_peso}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_au}" for="au" />
+                        <p:inputText id="au" value="#{tblControlPrenatalController.selected.au}" title="#{bundle.EditTblControlPrenatalTitle_au}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_au}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_fcf}" for="fcf" />
+                        <p:inputText id="fcf" value="#{tblControlPrenatalController.selected.fcf}" title="#{bundle.EditTblControlPrenatalTitle_fcf}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_fcf}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_eg}" for="eg" />
+                        <p:inputText id="eg" value="#{tblControlPrenatalController.selected.eg}" title="#{bundle.EditTblControlPrenatalTitle_eg}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_eg}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_cita}" for="cita" />
+                        <p:calendar id="cita" pattern="MM/dd/yyyy" value="#{tblControlPrenatalController.selected.cita}" title="#{bundle.EditTblControlPrenatalTitle_cita}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_cita}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_tipaje}" for="tipaje" />
+                        <p:inputText id="tipaje" value="#{tblControlPrenatalController.selected.tipaje}" title="#{bundle.EditTblControlPrenatalTitle_tipaje}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_tipaje}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_serologiaviral}" for="serologiaviral" />
+                        <p:inputText id="serologiaviral" value="#{tblControlPrenatalController.selected.serologiaviral}" title="#{bundle.EditTblControlPrenatalTitle_serologiaviral}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_serologiaviral}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_citologia}" for="citologia" />
+                        <p:inputText id="citologia" value="#{tblControlPrenatalController.selected.citologia}" title="#{bundle.EditTblControlPrenatalTitle_citologia}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_citologia}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labHB}" for="labHB" />
+                        <p:inputText id="labHB" value="#{tblControlPrenatalController.selected.labHB}" title="#{bundle.EditTblControlPrenatalTitle_labHB}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labHB}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labHTO}" for="labHTO" />
+                        <p:inputText id="labHTO" value="#{tblControlPrenatalController.selected.labHTO}" title="#{bundle.EditTblControlPrenatalTitle_labHTO}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labHTO}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labPLAQ}" for="labPLAQ" />
+                        <p:inputText id="labPLAQ" value="#{tblControlPrenatalController.selected.labPLAQ}" title="#{bundle.EditTblControlPrenatalTitle_labPLAQ}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labPLAQ}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labCB}" for="labCB" />
+                        <p:inputText id="labCB" value="#{tblControlPrenatalController.selected.labCB}" title="#{bundle.EditTblControlPrenatalTitle_labCB}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labCB}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labSEG}" for="labSEG" />
+                        <p:inputText id="labSEG" value="#{tblControlPrenatalController.selected.labSEG}" title="#{bundle.EditTblControlPrenatalTitle_labSEG}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labSEG}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labLINF}" for="labLINF" />
+                        <p:inputText id="labLINF" value="#{tblControlPrenatalController.selected.labLINF}" title="#{bundle.EditTblControlPrenatalTitle_labLINF}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labLINF}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labEOSF}" for="labEOSF" />
+                        <p:inputText id="labEOSF" value="#{tblControlPrenatalController.selected.labEOSF}" title="#{bundle.EditTblControlPrenatalTitle_labEOSF}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labEOSF}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labGLICEMIA}" for="labGLICEMIA" />
+                        <p:inputText id="labGLICEMIA" value="#{tblControlPrenatalController.selected.labGLICEMIA}" title="#{bundle.EditTblControlPrenatalTitle_labGLICEMIA}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labGLICEMIA}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labUREA}" for="labUREA" />
+                        <p:inputText id="labUREA" value="#{tblControlPrenatalController.selected.labUREA}" title="#{bundle.EditTblControlPrenatalTitle_labUREA}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labUREA}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labCREATININA}" for="labCREATININA" />
+                        <p:inputText id="labCREATININA" value="#{tblControlPrenatalController.selected.labCREATININA}" title="#{bundle.EditTblControlPrenatalTitle_labCREATININA}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labCREATININA}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labTGO}" for="labTGO" />
+                        <p:inputText id="labTGO" value="#{tblControlPrenatalController.selected.labTGO}" title="#{bundle.EditTblControlPrenatalTitle_labTGO}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labTGO}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labTGP}" for="labTGP" />
+                        <p:inputText id="labTGP" value="#{tblControlPrenatalController.selected.labTGP}" title="#{bundle.EditTblControlPrenatalTitle_labTGP}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labTGP}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labLDH}" for="labLDH" />
+                        <p:inputText id="labLDH" value="#{tblControlPrenatalController.selected.labLDH}" title="#{bundle.EditTblControlPrenatalTitle_labLDH}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labLDH}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labBT}" for="labBT" />
+                        <p:inputText id="labBT" value="#{tblControlPrenatalController.selected.labBT}" title="#{bundle.EditTblControlPrenatalTitle_labBT}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labBT}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labBD}" for="labBD" />
+                        <p:inputText id="labBD" value="#{tblControlPrenatalController.selected.labBD}" title="#{bundle.EditTblControlPrenatalTitle_labBD}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labBD}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labNI}" for="labNI" />
+                        <p:inputText id="labNI" value="#{tblControlPrenatalController.selected.labNI}" title="#{bundle.EditTblControlPrenatalTitle_labNI}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labNI}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labPROTEINAST}" for="labPROTEINAST" />
+                        <p:inputText id="labPROTEINAST" value="#{tblControlPrenatalController.selected.labPROTEINAST}" title="#{bundle.EditTblControlPrenatalTitle_labPROTEINAST}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labPROTEINAST}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labELECTROLITOS}" for="labELECTROLITOS" />
+                        <p:inputText id="labELECTROLITOS" value="#{tblControlPrenatalController.selected.labELECTROLITOS}" title="#{bundle.EditTblControlPrenatalTitle_labELECTROLITOS}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labELECTROLITOS}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labHIV}" for="labHIV" />
+                        <p:inputText id="labHIV" value="#{tblControlPrenatalController.selected.labHIV}" title="#{bundle.EditTblControlPrenatalTitle_labHIV}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labHIV}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labVDRL}" for="labVDRL" />
+                        <p:inputText id="labVDRL" value="#{tblControlPrenatalController.selected.labVDRL}" title="#{bundle.EditTblControlPrenatalTitle_labVDRL}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labVDRL}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labPT}" for="labPT" />
+                        <p:inputText id="labPT" value="#{tblControlPrenatalController.selected.labPT}" title="#{bundle.EditTblControlPrenatalTitle_labPT}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labPT}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_labPTT}" for="labPTT" />
+                        <p:inputText id="labPTT" value="#{tblControlPrenatalController.selected.labPTT}" title="#{bundle.EditTblControlPrenatalTitle_labPTT}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_labPTT}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_uroanalisis}" for="uroanalisis" />
+                        <p:inputText id="uroanalisis" value="#{tblControlPrenatalController.selected.uroanalisis}" title="#{bundle.EditTblControlPrenatalTitle_uroanalisis}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_uroanalisis}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_urocultivo}" for="urocultivo" />
+                        <p:inputText id="urocultivo" value="#{tblControlPrenatalController.selected.urocultivo}" title="#{bundle.EditTblControlPrenatalTitle_urocultivo}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_urocultivo}"/>
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_ecosonograma}" for="ecosonograma" />
+                        <p:inputText id="ecosonograma" value="#{tblControlPrenatalController.selected.ecosonograma}" title="#{bundle.EditTblControlPrenatalTitle_ecosonograma}" />
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_observaciones}" for="observaciones" />
+                        <p:inputText id="observaciones" value="#{tblControlPrenatalController.selected.observaciones}" title="#{bundle.EditTblControlPrenatalTitle_observaciones}" />
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_indicaciones}" for="indicaciones" />
+                        <p:inputText id="indicaciones" value="#{tblControlPrenatalController.selected.indicaciones}" title="#{bundle.EditTblControlPrenatalTitle_indicaciones}" />
+                        <p:outputLabel value="#{bundle.EditTblControlPrenatalLabel_idpaciente}" for="idpaciente" />
+                        <p:selectOneMenu id="idpaciente" value="#{tblControlPrenatalController.selected.idpaciente}" required="true" requiredMessage="#{bundle.EditTblControlPrenatalRequiredMessage_idpaciente}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{tblRegistroPacienteController.itemsAvailableSelectOne}"
+                                           var="idpacienteItem"
+                                           itemValue="#{idpacienteItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tblControlPrenatalController.update}" value="#{bundle.Save}" update="display,:TblControlPrenatalListForm:datalist,:growl" oncomplete="handleSubmit(args, 'TblControlPrenatalEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TblControlPrenatalEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
