@@ -135,13 +135,17 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecofur}"/>
                             </f:facet>
-                            <h:outputText value="#{item.antginecofur}"/>
+                            <h:outputText value="#{item.antginecofur}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_antginecofpp}"/>
                             </f:facet>
-                            <h:outputText value="#{item.antginecofpp}"/>
+                            <h:outputText value="#{item.antginecofpp}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
@@ -166,6 +170,324 @@
                                 <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_talla}"/>
                             </f:facet>
                             <h:outputText value="#{item.talla}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_general}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.general}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_mamas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mamas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_abdomen}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.abdomen}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_genitalesExternos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.genitalesExternos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_vaginaCuelloUterino}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vaginaCuelloUterino}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_uteroAnexos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.uteroAnexos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_colposcopia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.colposcopia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_tsctoRectal}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tsctoRectal}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_diagnostico}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.diagnostico}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_plan}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.plan}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_tipeaje}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipeaje}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_tipeajePareja}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipeajePareja}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_vih}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vih}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_vihFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vihFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_vdrl}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vdrl}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_vdrlFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vdrlFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_nota}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nota}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hepB}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hepB}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hepBFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hepBFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hepC}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hepC}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hepCFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hepCFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_toxotest}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.toxotest}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_toxotestFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.toxotestFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_cmv}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cmv}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_cmvFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cmvFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_rubeola}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rubeola}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_rubeolaFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rubeolaFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hs}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hs}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hsFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hsFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hc}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hcFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hcFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_gb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.gb}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_leucocitos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.leucocitos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_plaquetas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.plaquetas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hb}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_hcto}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hcto}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_quimica}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.quimica}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_glicemia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.glicemia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_urea}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.urea}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_creatinina}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.creatinina}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_ast}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ast}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_alt}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alt}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_colesterol}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.colesterol}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_trigliceridos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trigliceridos}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_uroanalisis}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.uroanalisis}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_uroanalisisFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.uroanalisisFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_citologia}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.citologia}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_citologiaFecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.citologiaFecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblRegistroPacienteTitle_citologiaOtros}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.citologiaOtros}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{tblRegistroPacienteController.prepareCreate}" update=":TblRegistroPacienteCreateForm" oncomplete="PF('TblRegistroPacienteCreateDialog').show()"/>

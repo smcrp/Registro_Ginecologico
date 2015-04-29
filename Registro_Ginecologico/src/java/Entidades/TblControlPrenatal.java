@@ -89,20 +89,19 @@ public class TblControlPrenatal implements Serializable {
     private String ta;
     @Basic(optional = false)
     @NotNull
+    @Size(min = 1, max = 8)
     @Column(name = "Peso")
-    private long peso;
+    private String peso;
     @Basic(optional = false)
     @NotNull
     @Column(name = "Au")
     private int au;
-    @Basic(optional = false)
-    @NotNull
+    @Size(max = 2)
     @Column(name = "Fcf")
-    private int fcf;
-    @Basic(optional = false)
-    @NotNull
+    private String fcf;
+    @Size(max = 11)
     @Column(name = "Eg")
-    private int eg;
+    private String eg;
     @Basic(optional = false)
     @NotNull
     @Column(name = "Cita")
@@ -238,14 +237,12 @@ public class TblControlPrenatal implements Serializable {
         this.idcontrolprenatal = idcontrolprenatal;
     }
 
-    public TblControlPrenatal(Integer idcontrolprenatal, Date fechaconsulta, String ta, long peso, int au, int fcf, int eg, Date cita, int tipaje, String serologiaviral, String citologia, int labHB, int labHTO, int labPLAQ, int labCB, int labSEG, int labLINF, int labEOSF, int labGLICEMIA, int labUREA, int labCREATININA, int labTGO, int labTGP, int labLDH, int labBT, int labBD, int labNI, int labPROTEINAST, int labELECTROLITOS, int labHIV, int labVDRL, int labPT, int labPTT, int uroanalisis, int urocultivo) {
+    public TblControlPrenatal(Integer idcontrolprenatal, Date fechaconsulta, String ta, String peso, int au, Date cita, int tipaje, String serologiaviral, String citologia, int labHB, int labHTO, int labPLAQ, int labCB, int labSEG, int labLINF, int labEOSF, int labGLICEMIA, int labUREA, int labCREATININA, int labTGO, int labTGP, int labLDH, int labBT, int labBD, int labNI, int labPROTEINAST, int labELECTROLITOS, int labHIV, int labVDRL, int labPT, int labPTT, int uroanalisis, int urocultivo) {
         this.idcontrolprenatal = idcontrolprenatal;
         this.fechaconsulta = fechaconsulta;
         this.ta = ta;
         this.peso = peso;
         this.au = au;
-        this.fcf = fcf;
-        this.eg = eg;
         this.cita = cita;
         this.tipaje = tipaje;
         this.serologiaviral = serologiaviral;
@@ -300,11 +297,11 @@ public class TblControlPrenatal implements Serializable {
         this.ta = ta;
     }
 
-    public long getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public void setPeso(long peso) {
+    public void setPeso(String peso) {
         this.peso = peso;
     }
 
@@ -316,19 +313,19 @@ public class TblControlPrenatal implements Serializable {
         this.au = au;
     }
 
-    public int getFcf() {
+    public String getFcf() {
         return fcf;
     }
 
-    public void setFcf(int fcf) {
+    public void setFcf(String fcf) {
         this.fcf = fcf;
     }
 
-    public int getEg() {
+    public String getEg() {
         return eg;
     }
 
-    public void setEg(int eg) {
+    public void setEg(String eg) {
         this.eg = eg;
     }
 

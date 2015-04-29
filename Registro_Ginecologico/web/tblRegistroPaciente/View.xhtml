@@ -49,9 +49,13 @@
                         <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecopmf}"/>
                         <h:outputText value="#{tblRegistroPacienteController.selected.antginecopmf}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecopmf}"/>
                         <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecofur}"/>
-                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecofur}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecofur}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecofur}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecofur}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
                         <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecofpp}"/>
-                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecofpp}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecofpp}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.antginecofpp}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecofpp}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
                         <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_antginecoeg}"/>
                         <h:outputText value="#{tblRegistroPacienteController.selected.antginecoeg}" title="#{bundle.ViewTblRegistroPacienteTitle_antginecoeg}"/>
                         <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_ta}"/>
@@ -60,6 +64,128 @@
                         <h:outputText value="#{tblRegistroPacienteController.selected.peso}" title="#{bundle.ViewTblRegistroPacienteTitle_peso}"/>
                         <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_talla}"/>
                         <h:outputText value="#{tblRegistroPacienteController.selected.talla}" title="#{bundle.ViewTblRegistroPacienteTitle_talla}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_general}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.general}" title="#{bundle.ViewTblRegistroPacienteTitle_general}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_mamas}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.mamas}" title="#{bundle.ViewTblRegistroPacienteTitle_mamas}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_abdomen}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.abdomen}" title="#{bundle.ViewTblRegistroPacienteTitle_abdomen}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_genitalesExternos}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.genitalesExternos}" title="#{bundle.ViewTblRegistroPacienteTitle_genitalesExternos}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_vaginaCuelloUterino}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.vaginaCuelloUterino}" title="#{bundle.ViewTblRegistroPacienteTitle_vaginaCuelloUterino}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_uteroAnexos}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.uteroAnexos}" title="#{bundle.ViewTblRegistroPacienteTitle_uteroAnexos}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_colposcopia}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.colposcopia}" title="#{bundle.ViewTblRegistroPacienteTitle_colposcopia}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_tsctoRectal}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.tsctoRectal}" title="#{bundle.ViewTblRegistroPacienteTitle_tsctoRectal}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_diagnostico}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.diagnostico}" title="#{bundle.ViewTblRegistroPacienteTitle_diagnostico}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_plan}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.plan}" title="#{bundle.ViewTblRegistroPacienteTitle_plan}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_tipeaje}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.tipeaje}" title="#{bundle.ViewTblRegistroPacienteTitle_tipeaje}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_tipeajePareja}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.tipeajePareja}" title="#{bundle.ViewTblRegistroPacienteTitle_tipeajePareja}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_vih}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.vih}" title="#{bundle.ViewTblRegistroPacienteTitle_vih}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_vihFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.vihFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_vihFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_vdrl}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.vdrl}" title="#{bundle.ViewTblRegistroPacienteTitle_vdrl}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_vdrlFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.vdrlFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_vdrlFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_nota}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.nota}" title="#{bundle.ViewTblRegistroPacienteTitle_nota}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hepB}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hepB}" title="#{bundle.ViewTblRegistroPacienteTitle_hepB}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hepBFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hepBFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_hepBFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hepC}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hepC}" title="#{bundle.ViewTblRegistroPacienteTitle_hepC}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hepCFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hepCFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_hepCFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_toxotest}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.toxotest}" title="#{bundle.ViewTblRegistroPacienteTitle_toxotest}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_toxotestFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.toxotestFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_toxotestFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_cmv}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.cmv}" title="#{bundle.ViewTblRegistroPacienteTitle_cmv}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_cmvFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.cmvFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_cmvFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_rubeola}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.rubeola}" title="#{bundle.ViewTblRegistroPacienteTitle_rubeola}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_rubeolaFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.rubeolaFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_rubeolaFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hs}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hs}" title="#{bundle.ViewTblRegistroPacienteTitle_hs}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hsFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hsFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_hsFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hc}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hc}" title="#{bundle.ViewTblRegistroPacienteTitle_hc}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hcFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hcFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_hcFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_gb}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.gb}" title="#{bundle.ViewTblRegistroPacienteTitle_gb}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_leucocitos}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.leucocitos}" title="#{bundle.ViewTblRegistroPacienteTitle_leucocitos}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_plaquetas}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.plaquetas}" title="#{bundle.ViewTblRegistroPacienteTitle_plaquetas}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hb}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hb}" title="#{bundle.ViewTblRegistroPacienteTitle_hb}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_hcto}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.hcto}" title="#{bundle.ViewTblRegistroPacienteTitle_hcto}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_quimica}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.quimica}" title="#{bundle.ViewTblRegistroPacienteTitle_quimica}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_glicemia}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.glicemia}" title="#{bundle.ViewTblRegistroPacienteTitle_glicemia}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_urea}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.urea}" title="#{bundle.ViewTblRegistroPacienteTitle_urea}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_creatinina}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.creatinina}" title="#{bundle.ViewTblRegistroPacienteTitle_creatinina}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_ast}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.ast}" title="#{bundle.ViewTblRegistroPacienteTitle_ast}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_alt}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.alt}" title="#{bundle.ViewTblRegistroPacienteTitle_alt}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_colesterol}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.colesterol}" title="#{bundle.ViewTblRegistroPacienteTitle_colesterol}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_trigliceridos}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.trigliceridos}" title="#{bundle.ViewTblRegistroPacienteTitle_trigliceridos}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_uroanalisis}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.uroanalisis}" title="#{bundle.ViewTblRegistroPacienteTitle_uroanalisis}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_uroanalisisFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.uroanalisisFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_uroanalisisFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_citologia}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.citologia}" title="#{bundle.ViewTblRegistroPacienteTitle_citologia}"/>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_citologiaFecha}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.citologiaFecha}" title="#{bundle.ViewTblRegistroPacienteTitle_citologiaFecha}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewTblRegistroPacienteLabel_citologiaOtros}"/>
+                        <h:outputText value="#{tblRegistroPacienteController.selected.citologiaOtros}" title="#{bundle.ViewTblRegistroPacienteTitle_citologiaOtros}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="TblRegistroPacienteViewDialog.hide()"/>
                 </h:panelGroup>
