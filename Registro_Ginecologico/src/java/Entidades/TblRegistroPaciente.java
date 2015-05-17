@@ -134,8 +134,9 @@ public class TblRegistroPaciente implements Serializable {
     @Column(name = "Fecha_nacimiento")
     @Temporal(TemporalType.DATE)
     private Date fechanacimiento;
+    @Size(min = 1, max = 17)
     @Column(name = "Tlf")
-    private Integer tlf;
+    private String tlf;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 250)
@@ -564,11 +565,11 @@ public class TblRegistroPaciente implements Serializable {
         this.fechanacimiento = fechanacimiento;
     }
 
-    public Integer getTlf() {
+    public String getTlf() {
         return tlf;
     }
 
-    public void setTlf(Integer tlf) {
+    public void setTlf(String tlf) {
         this.tlf = tlf;
     }
 
